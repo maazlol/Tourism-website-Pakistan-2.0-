@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Pakistan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo">🇵🇰 Tourism Pakistan</div>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button id="darkModeBtn" class="dark-mode-toggle">🌙</button>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero::before"></div>
+    <div class="hero-content">
+        <h1>Welcome to Pakistan</h1>
+        <h2>Experience the <span class="pk">Beauty of Pakistan</span></h2>
+        <p>Discover breathtaking landscapes, rich culture, and unforgettable adventures across the country.</p>
+        <button class="btn-primary" id="heroExploreButton">Explore Now</button>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+    <div class="about-content">
+        <div class="about-text">
+            <h1>Why Visit <span class="pk">Pakistan?</span></h1>
+            <p>Pakistan is a country of stunning contrasts. From the snow-capped Himalayan peaks to the sandy beaches of Karachi, from bustling bazaars to serene valleys, Pakistan offers something for every traveler.</p>
+            <p>Experience world-class hospitality, delicious cuisine, and a rich cultural heritage that spans thousands of years.</p>
+        </div>
+        <div class="image-stack">
+            <img src="syed-bilal-javaid-NDw1gxtfglY-unsplash.jpg" alt="Pakistan" class="img img1">
+            <img src="hassan-anwer-I_n4H25slzU-unsplash.jpg" alt="Pakistan" class="img img2">
+            <img src="qasim-nagori-1x3qakkpzZU-unsplash.jpg" alt="Pakistan" class="img img3">
+        </div>
+    </div>
+</section>
+
+<!-- Cities Section -->
+<section class="cities-section">
+    <div class="container">
+        <h2>Top Cities to Explore</h2>
+        <div class="cities-grid">
+            <div class="city-card">
+                <div class="city-image">
+                    <img src="qasim-nagori-1x3qakkpzZU-unsplash.jpg" alt="Islamabad">
+                </div>
+                <div class="city-details">
+                    <h3>🏔️ Islamabad</h3>
+                    <p><strong>Location:</strong> Federal Capital</p>
+                    <p>Modern capital nestled against Margalla Hills. Perfect blend of nature and urban life.</p>
+                </div>
+            </div>
+
+            <div class="city-card">
+                <div class="city-image">
+                    <img src="hassan-anwer-I_n4H25slzU-unsplash.jpg" alt="Lahore">
+                </div>
+                <div class="city-details">
+                    <h3>🏛️ Lahore</h3>
+                    <p><strong>Location:</strong> Punjab Province</p>
+                    <p>City of Gardens with stunning Mughal architecture and delicious food.</p>
+                </div>
+            </div>
+
+            <div class="city-card">
+                <div class="city-image">
+                    <img src="Karachi.jpg" alt="Karachi">
+                </div>
+                <div class="city-details">
+                    <h3>🌆 Karachi</h3>
+                    <p><strong>Location:</strong> Sindh Province</p>
+                    <p>Largest city and coastal hub, famous for beaches, food, and nightlife.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section id="cta-section" style="background: linear-gradient(90deg, #cc5200 0%, #ff7722 100%); padding: 60px 40px; text-align: center; color: white;">
+    <h2 style="font-size: 36px; margin-bottom: 20px;">Ready to Explore?</h2>
+    <p style="font-size: 18px; margin-bottom: 30px;">Discover breathtaking destinations across Pakistan and find your next favorite spot!</p>
+    <a href="destinations.html" class="btn-primary" style="background: white; color: #ff7722; border-color: white;">View Destinations</a>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 Tourism Pakistan. All rights reserved.</p>
+    <p>Designed with ❤️ for explorers</p>
+</footer>
+
+<script>
+    const heroButton = document.getElementById('heroExploreButton');
+    if (heroButton) {
+        heroButton.addEventListener('click', () => {
+            const target = document.getElementById('cta-section');
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+</script>
+<script src="dark-mode.js"></script>
+</body>
+</html>
