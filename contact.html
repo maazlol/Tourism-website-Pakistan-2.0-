@@ -77,31 +77,24 @@
 
 <script src="dark-mode.js"></script>
 <script>
-  const contactPreview = document.getElementById('contactPreview');
-  const contactFields = document.querySelectorAll('.contact-form input, .contact-form textarea');
+const contactPreview = document.getElementById('contactPreview');
+const contactFields = document.querySelectorAll('.contact-form input, .contact-form textarea');
 
-  function showContactPreview() {
-    contactPreview.classList.add('active');
+function checkAllFields() {
+
+  const hasText = Array.from(contactFields).some(field => field.value.trim().length > 0);
+
+  if (hasText) {
+    contactPreview.classList.remove('active'); 
+  } else {
+    contactPreview.classList.add('active'); 
   }
+}
 
-  function hideContactPreview() {
-    contactPreview.classList.remove('active');
-  }
-
-  contactFields.forEach(field => {
-    field.addEventListener('focus', () => {
-      if (!field.value.trim()) {
-        showContactPreview();
-      }
-    });
-
-    field.addEventListener('input', () => {
-      if (field.value.trim().length > 0) {
-        hideContactPreview();
-      } else {
-        showContactPreview();
-      }
-    });
+contactFields.forEach(field => {
+  field.addEventListener('focus', checkAllFields);
+  field.addEventListener('input', checkAllFields);
+});
   });
 </script>
 </body>
