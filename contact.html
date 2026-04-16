@@ -77,7 +77,7 @@
 
 <script src="dark-mode.js"></script>
 <script>
-const contactPreview = document.getElementById('contactPreview');
+  const contactPreview = document.getElementById('contactPreview');
 const contactFields = document.querySelectorAll('.contact-form input, .contact-form textarea');
 
 function checkAllFields() {
@@ -95,7 +95,6 @@ contactFields.forEach(field => {
   field.addEventListener('focus', checkAllFields);
   field.addEventListener('input', checkAllFields);
 });
-  });
 </script>
 </body>
 </html>
